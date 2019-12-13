@@ -11,10 +11,10 @@ def string_to_array(s):
     return string
 
 
-string_to_array("Robin Singh")
-string_to_array("CodeWars")
-string_to_array("I love arrays they are my favorite")
-string_to_array("1 2 3")
+# string_to_array("Robin Singh")
+# string_to_array("CodeWars")
+# string_to_array("I love arrays they are my favorite")
+# string_to_array("1 2 3")
 
 
 # Create a function that gives a personalized greeting.
@@ -34,10 +34,10 @@ def greet(name, owner):
         print('Hello guest')
 
 
-greet("Fred", "Fred")
-greet("Tim", "Fred")
-greet("Sarah", "Fred")
-greet("owner", "OWNER")
+# greet("Fred", "Fred")
+# greet("Tim", "Fred")
+# greet("Sarah", "Fred")
+# greet("owner", "OWNER")
 
 # Some numbers have funny properties. For example:
 
@@ -85,10 +85,10 @@ def dig_pow(n, p):
         return -1
 
 
-print(dig_pow(89, 1))
-print(dig_pow(695, 2))
-print(dig_pow(92, 1))
-print(dig_pow(46288, 3))
+# print(dig_pow(89, 1))
+# print(dig_pow(695, 2))
+# print(dig_pow(92, 1))
+# print(dig_pow(46288, 3))
 
 
 # Bob is preparing to pass IQ test. The most frequent task in this test is to find out which
@@ -122,10 +122,114 @@ def iq_test(numbers):
             index_odd = i + 1
 
     if count_even == 1:
-        print( "index_even")
+        print("index_even")
     else:
-        print( "index_odd")
+        print("index_odd")
 
 
-iq_test("2 4 7 8 10")
-iq_test("1 2 1 1")
+# iq_test("2 4 7 8 10")
+# iq_test("1 2 1 1")
+
+# Alan Partridge II - Apple Turnover
+# Your job is simple, if (x) squared is more than 1000, return 'It's hotter than the sun!!', 
+# else, return 'Help yourself to a honeycomb Yorkie for the glovebox.'.
+
+# X will be either a number or a string. Both are valid.
+
+def apple(x):
+    x = int(x)
+    if x*x > 1000:
+        print("It's hotter than the sun!!")
+    else:
+        print("Help yourself to a honeycomb Yorkie for the glovebox.")
+
+
+
+# apple('50') # = "It's hotter than the sun!!"
+# apple(4)  # = "Help yourself to a honeycomb Yorkie for the glovebox."
+# apple("12")  # = "Help yourself to a honeycomb Yorkie for the glovebox."
+# apple(60)  # = "It's hotter than the sun!!"
+# apple(12)  # = "Help yourself to a honeycomb Yorkie for the glovebox."
+# apple(4.4)  # = "Help yourself to a honeycomb Yorkie for the glovebox."
+
+#######################################
+
+# Build a function that takes in two arguments(salary, bonus). 
+# Salary will be an integer, and bonus a boolean.
+
+# If bonus is true, the salary should be multiplied by 10. 
+# If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
+
+# Return the total figure the individual will receive as a string prefixed with "£" (="\u00A3", JS, Go, and Java),
+# "$" (C  # , C++, Ruby, Clojure, Elixir, PHP and Python, Haskell, Lua) 
+# or "¥" (Rust).
+
+def bonus_time(salary, bonus):
+    #your code here
+    if bonus == True:
+        sal = salary*10
+        
+        print('$'+str(sal))
+    else:
+        print('$'+str(salary))
+
+
+bonus_time(10000, True)
+
+
+
+
+
+
+# For every good kata idea there seem to be quite a few bad ones!
+
+# In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'. 
+# If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. 
+# If there are no good ideas, as is often the case, return 'Fail!'.
+
+def well(x):
+
+    for i in x:
+        g=0
+        b=0
+        if i == 'good':
+            g+=1
+        elif i == 'bad':
+            b+=1
+    if g==0:
+        print('Fail!')
+    elif g ==1:
+        print('Publish!')
+    elif g >1:
+        print("I smell a series!")
+
+# well(['bad', 'bad', 'bad']) # = Fail!
+# well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
+# well(['good', 'bad', 'bad', 'bad', 'bad','good', 'bad', 'bad', 'good']) # = I smell a series!
+
+
+
+
+
+# Given an array of integers, return a new array with each value doubled.
+# For example:
+# [1, 2, 3] - -> [2, 4, 6]
+print("dangit")
+
+
+def maps(a):
+    if a == []:
+        print(a)
+    else:
+        for x in a:
+            b = int(a)
+            c = b*2
+            ans = []
+            ans.append(c)
+
+            print(ans)
+
+
+# maps([1, 2, 3])  # = [2, 4, 6])
+# maps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])  # =  [0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
+# maps([])  # = [])
