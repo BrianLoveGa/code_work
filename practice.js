@@ -163,15 +163,42 @@ function iqTest(numbers) {
   }
 
   if (countEven === 1) {
-    return(indexEven);
+    return indexEven;
   } else {
-    return(indexOdd);
+    return indexOdd;
   }
 }
 
 console.log(iqTest("2 4 7 8 10"));
 console.log(iqTest("1 2 1 1"));
 
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+// # Alan Partridge II - Apple Turnover
+// # Your job is simple, if (x) squared is more than 1000, return 'It's hotter than the sun!!',
+// # else, return 'Help yourself to a honeycomb Yorkie for the glovebox.'.
+
+// # X will be either a number or a string. Both are valid.
+
+function apple(x) {
+  let y = Number(x);
+  if (y * y > 1000) {
+    return "It's hotter than the sun!!";
+  } else {
+    return "Help yourself to a honeycomb Yorkie for the glovebox.";
+  }
+}
+
+console.log(apple("50"));
+console.log(apple(4));
+console.log(apple("12"));
+console.log(apple(60));
+console.log(apple(12));
+console.log(apple(4.4));
 
 // works
 
