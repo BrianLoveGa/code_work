@@ -1,3 +1,28 @@
+
+
+import math
+
+
+# auto format moves import to top - math is used later in codes
+# remove spaces from the string
+# completed
+
+
+def no_space(s):
+    ans = s.replace(" ", "")
+    print(ans)
+
+
+print("test test   tesst")
+no_space("test test  tesst")
+no_space("c h e c  k i nh  y r f ")
+
+
+#######################################
+#######################################
+#######################################
+
+
 # Convert a string to an array
 # "Robin Singh" == > ["Robin", "Singh"]
 
@@ -5,9 +30,8 @@
 # ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 
-import math
-
 # completed
+
 
 def string_to_array(s):
     string = s.split(" ")
@@ -43,7 +67,7 @@ def greet(name, owner):
 
 # greet("Fred", "Fred")
 # greet("Tim", "Fred")
-# greet("Sarah", "Fred")
+# greet("Sarah", "Sasha")
 # greet("owner", "OWNER")
 
 
@@ -147,7 +171,7 @@ def iq_test(numbers):
 
 
 # Alan Partridge II - Apple Turnover
-# Your job is simple, if (x) squared is more than 1000, return 'It's hotter than the sun!!', 
+# Your job is simple, if (x) squared is more than 1000, return 'It's hotter than the sun!!',
 # else, return 'Help yourself to a honeycomb Yorkie for the glovebox.'.
 
 # X will be either a number or a string. Both are valid.
@@ -168,29 +192,27 @@ def apple(x):
 # apple(4.4)  # = "Help yourself to a honeycomb Yorkie for the glovebox."
 
 
-
 #######################################
 #######################################
 #######################################
 
 
-
-# Build a function that takes in two arguments(salary, bonus). 
+# Build a function that takes in two arguments(salary, bonus).
 # Salary will be an integer, and bonus a boolean.
 
-# If bonus is true, the salary should be multiplied by 10. 
+# If bonus is true, the salary should be multiplied by 10.
 # If bonus is false, the fatcat did not make enough money and must receive only his stated salary.
 
 # Return the total figure the individual will receive as a string prefixed with "£" (="\u00A3", JS, Go, and Java),
-# "$" (C  # , C++, Ruby, Clojure, Elixir, PHP and Python, Haskell, Lua) 
+# "$" (C  # , C++, Ruby, Clojure, Elixir, PHP and Python, Haskell, Lua)
 # or "¥" (Rust).
 
 # completed
 def bonus_time(salary, bonus):
-    #your code here
+    # your code here
     if bonus == True:
         sal = salary*10
-        
+
         print('$'+str(sal))
     else:
         print('$'+str(salary))
@@ -199,11 +221,9 @@ def bonus_time(salary, bonus):
 # bonus_time(10000, True)
 
 
-
 #######################################
 #######################################
 #######################################
-
 
 
 # Task
@@ -228,6 +248,7 @@ def is_square(n):
         else:
             return False
 
+
 print(is_square(-1))
 print(is_square(0))
 print(is_square(3))
@@ -235,13 +256,10 @@ print(is_square(4))
 print(is_square(25))
 
 
-
-
-
 # For every good kata idea there seem to be quite a few bad ones!
 
-# In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'. 
-# If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. 
+# In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'.
+# If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'.
 # If there are no good ideas, as is often the case, return 'Fail!'.
 
 
@@ -249,25 +267,22 @@ print(is_square(25))
 def well(x):
 
     for i in x:
-        g=0
-        b=0
+        g = 0
+        b = 0
         if i == 'good':
-            g+=1
+            g += 1
         elif i == 'bad':
-            b+=1
-    if g==0:
+            b += 1
+    if g == 0:
         print('Fail!')
-    elif g ==1:
+    elif g == 1:
         print('Publish!')
-    elif g >1:
+    elif g > 1:
         print("I smell a series!")
 
 # well(['bad', 'bad', 'bad']) # = Fail!
 # well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
 # well(['good', 'bad', 'bad', 'bad', 'bad','good', 'bad', 'bad', 'good']) # = I smell a series!
-
-
-
 
 
 # Given an array of integers, return a new array with each value doubled.
