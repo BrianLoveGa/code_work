@@ -13,9 +13,9 @@ def no_space(s):
     print(ans)
 
 
-print("test test   tesst")
-no_space("test test  tesst")
-no_space("c h e c  k i nh  y r f ")
+# print("test test   tesst")
+# no_space("test test  tesst")
+# no_space("c h e c  k i nh  y r f ")
 
 
 #######################################
@@ -119,12 +119,12 @@ def dig_pow(n, p):
         return -1
 
 
-print("here")
-print(dig_pow(89, 1))
-print(dig_pow(92, 1))
+# print("here")
+# print(dig_pow(89, 1))
+# print(dig_pow(92, 1))
 # print(dig_pow(695, 2))
 # print(dig_pow(46288, 3))
-print("here")
+# print("here")
 
 
 #######################################
@@ -244,7 +244,7 @@ def bonus_time(salary, bonus):
 
 # working now
 
-print("squares")
+# print("squares")
 
 
 def is_square(n):
@@ -261,11 +261,16 @@ def is_square(n):
             return False
 
 
-print(is_square(-1))   # false
-print(is_square(0))    # true
-print(is_square(3))   # false
-print(is_square(4))    # true
-print(is_square(25))    # true
+# print(is_square(-1))   # false
+# print(is_square(0))    # true
+# print(is_square(3))   # false
+# print(is_square(4))    # true
+# print(is_square(25))    # true
+
+
+#######################################
+#######################################
+#######################################
 
 
 # For every good kata idea there seem to be quite a few bad ones!
@@ -275,23 +280,32 @@ print(is_square(25))    # true
 # If there are no good ideas, as is often the case, return 'Fail!'.
 
 
-# close on this one - the js version works at least
+# works now - clunky but effective
 def well(x):
-   for i in x:
     g = 0
-    if i == 'good':
-        g += 1
+    b = 0
+    for i in x:
+        if b == len(x):
+            break
+        if i == 'good':
+            g += 1
+        else:
+            b +=1
     if g == 0:
         print('Fail!')
-    elif g <= 2:
+    elif g>0 and g <= 2:
         print('Publish!')
     else:
         print("I smell a series!")
 
-well(['bad', 'bad', 'bad'])  # = Fail!
-well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
-well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']) # = I smell a series!
+# well(['bad', 'bad', 'bad'])  # = Fail!
+# well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
+# well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']) # = I smell a series!
 
+
+#######################################
+#######################################
+#######################################
 
 # Given an array of integers, return a new array with each value doubled.
 # For example:
@@ -312,6 +326,6 @@ def maps(a):
             print(ans)
 
 
-# maps([1, 2, 3])  # = [2, 4, 6])
-# maps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])  # =  [0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
-# maps([])  # = [])
+maps([1, 2, 3])  # = [2, 4, 6])
+maps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])  # =  [0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
+maps([])  # = [])

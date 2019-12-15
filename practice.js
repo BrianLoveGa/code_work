@@ -266,6 +266,13 @@ console.log(isSquare(3));
 console.log(isSquare(4));
 console.log(isSquare(25));
 
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+
 // # For every good kata idea there seem to be quite a few bad ones!
 // # In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'.
 // # If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'.
@@ -292,3 +299,19 @@ console.log(well(["good", "bad", "bad", "bad", "bad"]));
 console.log(
   well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"])
 );
+
+
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+// # Given an array of integers, return a new array with each value doubled.
+// # For example:
+// # [1, 2, 3] - -> [2, 4, 6]
+
+
+function maps(a){
+    
+}
