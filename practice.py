@@ -162,9 +162,9 @@ def iq_test(numbers):
             index_odd = i + 1
 
     if count_even == 1:
-        print("index_even")
+        print(index_even)
     else:
-        print("index_odd")
+        print(index_odd)
 
 
 # iq_test("2 4 7 8 10")

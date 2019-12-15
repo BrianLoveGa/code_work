@@ -113,17 +113,68 @@ function digPow(n, p) {
   let k = summed / n;
   //console.log(k);
 
-
   if (summed % n === 0) {
     return k;
-    
   } else {
     return -1;
   }
 }
 
-
 console.log(digPow(89, 1));
 console.log(digPow(92, 1));
 console.log(digPow(695, 2));
 console.log(digPow(46288, 3));
+
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+// # Bob is preparing to pass IQ test. The most frequent task in this test is to find out which
+// # one of the given numbers differs from the others. Bob observed that one number usually differs
+// # from the others in evenness. Help Bob — to check his answers, he needs a program that among the
+// # given numbers finds one that is different in evenness, and return a position of this number.
+
+// # ! Keep in mind that your task is to help Bob solve a real IQ test, which means indexes of the
+// # elements start from 1 (not 0)
+
+// # ##Examples :
+// # iq_test("2 4 7 8 10") = > 3 // Third number is odd, while the rest of the numbers are even
+// # iq_test("1 2 1 1") = > 2 // Second number is even, while the rest of the numbers are odd
+
+function iqTest(numbers) {
+  let indexOdd = 0;
+  let indexEven = 0;
+
+  newNumbers = numbers.split(" ");
+
+  let countOdd = 0;
+  let countEven = 0;
+
+  for (let i = 0; i < newNumbers.length; i++) {
+    if (Number(newNumbers[i]) % 2 === 0) {
+      countEven += 1;
+      indexEven = i + 1;
+    } else {
+      countOdd += 1;
+      indexOdd = i + 1;
+    }
+  }
+
+  if (countEven === 1) {
+    return(indexEven);
+  } else {
+    return(indexOdd);
+  }
+}
+
+console.log(iqTest("2 4 7 8 10"));
+console.log(iqTest("1 2 1 1"));
+
+
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
