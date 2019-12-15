@@ -216,16 +216,16 @@ console.log(apple(4.4));
 // # "$" (C  # , C++, Ruby, Clojure, Elixir, PHP and Python, Haskell, Lua)
 // # or "¥" (Rust).
 
-function bonusTime(salary, bonus){
-    if(bonus === true){
-        let sal = salary*10
-        return "£ " + sal.toString();
-    } else {
-        return "£ " + salary.toString();
-    }
+function bonusTime(salary, bonus) {
+  if (bonus === true) {
+    let sal = salary * 10;
+    return "£ " + sal.toString();
+  } else {
+    return "£ " + salary.toString();
+  }
 }
 
-console.log(bonusTime(10000, true))
+console.log(bonusTime(10000, true));
 console.log(bonusTime(10000, false));
 console.log(bonusTime(10100, true));
 console.log(bonusTime(1023, true));
@@ -236,3 +236,56 @@ console.log(bonusTime(1023, true));
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 
+// # Task
+// # Given an integral number, determine if it's a square number:
+// # In mathematics, a square number or perfect square is an integer that is the square of an integer
+// # in other words, it is the product of some integer with itself.
+// # The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+function isSquare(n) {
+  if (n < 0) {
+    return false;
+  } else if (n === 0) {
+    return true;
+  } else {
+    a = Math.sqrt(n);
+    if (Number.isInteger(a) === true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+console.log(isSquare(-1));
+console.log(isSquare(0));
+console.log(isSquare(3));
+console.log(isSquare(4));
+console.log(isSquare(25));
+
+// # For every good kata idea there seem to be quite a few bad ones!
+// # In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'.
+// # If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'.
+// # If there are no good ideas, as is often the case, return 'Fail!'.
+
+function well(x) {
+  let g = 0;
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] === "good") {
+      g += 1;
+    }
+  }
+  if (g === 0) {
+    return "Fail!";
+  } else if (g <= 2) {
+    return "Publish!";
+  } else {
+    return "I smell a series!";
+  }
+}
+
+console.log(well(["bad", "bad", "bad"]));
+console.log(well(["good", "bad", "bad", "bad", "bad"]));
+console.log(
+  well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"])
+);

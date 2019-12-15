@@ -1,6 +1,6 @@
 
 
-import math
+import math as math
 
 
 # auto format moves import to top - math is used later in codes
@@ -99,7 +99,6 @@ def dig_pow(n, p):
     print(digits)
     pwr = p
     pwr_digits = list()
-    
 
     for num in digits:
         number = int(num)
@@ -118,6 +117,7 @@ def dig_pow(n, p):
         return k
     else:
         return -1
+
 
 print("here")
 print(dig_pow(89, 1))
@@ -242,7 +242,11 @@ def bonus_time(salary, bonus):
 
 # The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
-# close on this one
+# working now
+
+print("squares")
+
+
 def is_square(n):
     if n < 0:
         return False
@@ -250,18 +254,18 @@ def is_square(n):
         return True
     else:
         a = math.sqrt(n)
-        print(a)
-        if a == int:
+
+        if a.is_integer() == True:
             return True
         else:
             return False
 
 
-# print(is_square(-1))
-# print(is_square(0))
-# print(is_square(3))
-# print(is_square(4))
-# print(is_square(25))
+print(is_square(-1))   # false
+print(is_square(0))    # true
+print(is_square(3))   # false
+print(is_square(4))    # true
+print(is_square(25))    # true
 
 
 # For every good kata idea there seem to be quite a few bad ones!
@@ -271,26 +275,22 @@ def is_square(n):
 # If there are no good ideas, as is often the case, return 'Fail!'.
 
 
-# close on this one
+# close on this one - the js version works at least
 def well(x):
-
-    for i in x:
-        g = 0
-        b = 0
-        if i == 'good':
-            g += 1
-        elif i == 'bad':
-            b += 1
+   for i in x:
+    g = 0
+    if i == 'good':
+        g += 1
     if g == 0:
         print('Fail!')
-    elif g == 1:
+    elif g <= 2:
         print('Publish!')
-    elif g > 1:
+    else:
         print("I smell a series!")
 
-# well(['bad', 'bad', 'bad']) # = Fail!
-# well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
-# well(['good', 'bad', 'bad', 'bad', 'bad','good', 'bad', 'bad', 'good']) # = I smell a series!
+well(['bad', 'bad', 'bad'])  # = Fail!
+well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
+well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']) # = I smell a series!
 
 
 # Given an array of integers, return a new array with each value doubled.
