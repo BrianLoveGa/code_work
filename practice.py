@@ -96,29 +96,35 @@ def greet(name, owner):
 # completed
 def dig_pow(n, p):
     digits = list(str(n))
+    print(digits)
     pwr = p
     pwr_digits = list()
+    
 
     for num in digits:
         number = int(num)
+        print(number)
         numOut = number**pwr
         pwr_digits.append(numOut)
         pwr += 1
-
+    print(pwr_digits)
     summed = sum(pwr_digits)
+    print(summed)
 
     k = summed/n
+    print(k)
 
     if(summed % n == 0):
         return k
     else:
         return -1
 
-
-# print(dig_pow(89, 1))
+print("here")
+print(dig_pow(89, 1))
+print(dig_pow(92, 1))
 # print(dig_pow(695, 2))
-# print(dig_pow(92, 1))
 # print(dig_pow(46288, 3))
+print("here")
 
 
 #######################################
@@ -249,11 +255,11 @@ def is_square(n):
             return False
 
 
-print(is_square(-1))
-print(is_square(0))
-print(is_square(3))
-print(is_square(4))
-print(is_square(25))
+# print(is_square(-1))
+# print(is_square(0))
+# print(is_square(3))
+# print(is_square(4))
+# print(is_square(25))
 
 
 # For every good kata idea there seem to be quite a few bad ones!
@@ -288,7 +294,7 @@ def well(x):
 # Given an array of integers, return a new array with each value doubled.
 # For example:
 # [1, 2, 3] - -> [2, 4, 6]
-print("dangit")
+#  print("dangit")
 
 
 # close on this one

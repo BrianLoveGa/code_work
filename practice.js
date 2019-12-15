@@ -18,9 +18,9 @@ function noSpace(x) {
 
 console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
 
-console.log(noSpace("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd"));
+// console.log(noSpace("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd"));
 
-console.log(noSpace("8aaaaa dddd r     "));
+// console.log(noSpace("8aaaaa dddd r     "));
 
 // works
 
@@ -40,8 +40,8 @@ function arrayNow(str) {
 }
 
 console.log(arrayNow("I love arrays they are my favorite"));
-console.log(arrayNow("Robin Singh"));
-console.log(arrayNow("CodeWars"));
+// console.log(arrayNow("Robin Singh"));
+// console.log(arrayNow("CodeWars"));
 console.log(arrayNow("1 2 3"));
 
 // works
@@ -65,19 +65,16 @@ function greet(name, owner) {
   }
 }
 
-
 console.log(greet("Fred", "Fred"));
 console.log(greet("Tim", "Fred"));
 console.log(greet("Sarah", "Sasha"));
 console.log(greet("owner", "OWNER"));
-
 
 // works
 
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
-
 
 // # Some numbers have funny properties. For example:
 
@@ -96,8 +93,37 @@ console.log(greet("owner", "OWNER"));
 // # dig_pow(695, 2) should return 2 since 6² + 9³ + 5⁴ = 1390 = 695 * 2
 // # dig_pow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
 
+function digPow(n, p) {
+  let digits = n.toString().split("");
+  //console.log(digits);
+  let pwr = p;
+  let pwrDigits = [];
+
+  for (let i = 0; i < digits.length; i++) {
+    let number = Number(digits[i]);
+    //console.log(number);
+    let numOut = number ** pwr;
+    pwrDigits.push(numOut);
+    //console.log(pwrDigits)
+    pwr += 1;
+  }
+
+  let summed = pwrDigits.reduce((a, b) => a + b, 0);
+  //console.log(summed);
+  let k = summed / n;
+  //console.log(k);
 
 
-function digPow(n,p){
+  if (summed % n === 0) {
+    return k;
     
+  } else {
+    return -1;
+  }
 }
+
+
+console.log(digPow(89, 1));
+console.log(digPow(92, 1));
+console.log(digPow(695, 2));
+console.log(digPow(46288, 3));
