@@ -1,3 +1,6 @@
+// should be able to node this in terminal but python first so 
+// console log to an html file
+
 // Simple, remove the spaces from the string, then return the resultant string.
 
 // Test.assertEquals(
