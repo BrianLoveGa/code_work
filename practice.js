@@ -312,6 +312,15 @@ console.log(
 // # [1, 2, 3] - -> [2, 4, 6]
 
 
-function maps(a){
-    
+function maps(x){
+  let dbl = []
+    for (let i=0; i<x.length;i++){
+      dbl.push((x[i]*2))
+      
+
+    }
+    return dbl
 }
+
+
+console.log(maps([1, 2, 3]));
