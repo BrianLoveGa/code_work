@@ -1,4 +1,4 @@
-// should be able to node this in terminal but python first so 
+// should be able to node this in terminal but python first so
 // console log to an html file
 
 // Simple, remove the spaces from the string, then return the resultant string.
@@ -42,10 +42,10 @@ function arrayNow(str) {
   return ans;
 }
 
-console.log(arrayNow("I love arrays they are my favorite"));
+// console.log(arrayNow("I love arrays they are my favorite"));
 // console.log(arrayNow("Robin Singh"));
 // console.log(arrayNow("CodeWars"));
-console.log(arrayNow("1 2 3"));
+// console.log(arrayNow("1 2 3"));
 
 // works
 
@@ -68,10 +68,10 @@ function greet(name, owner) {
   }
 }
 
-console.log(greet("Fred", "Fred"));
-console.log(greet("Tim", "Fred"));
-console.log(greet("Sarah", "Sasha"));
-console.log(greet("owner", "OWNER"));
+// console.log(greet("Fred", "Fred"));
+// console.log(greet("Tim", "Fred"));
+// console.log(greet("Sarah", "Sasha"));
+// console.log(greet("owner", "OWNER"));
 
 // works
 
@@ -123,10 +123,10 @@ function digPow(n, p) {
   }
 }
 
-console.log(digPow(89, 1));
-console.log(digPow(92, 1));
-console.log(digPow(695, 2));
-console.log(digPow(46288, 3));
+// console.log(digPow(89, 1));
+// console.log(digPow(92, 1));
+// console.log(digPow(695, 2));
+// console.log(digPow(46288, 3));
 
 // works
 
@@ -172,8 +172,8 @@ function iqTest(numbers) {
   }
 }
 
-console.log(iqTest("2 4 7 8 10"));
-console.log(iqTest("1 2 1 1"));
+// console.log(iqTest("2 4 7 8 10"));
+// console.log(iqTest("1 2 1 1"));
 
 // works
 
@@ -196,12 +196,12 @@ function apple(x) {
   }
 }
 
-console.log(apple("50"));
-console.log(apple(4));
-console.log(apple("12"));
-console.log(apple(60));
-console.log(apple(12));
-console.log(apple(4.4));
+// console.log(apple("50"));
+// console.log(apple(4));
+// console.log(apple("12"));
+// console.log(apple(60));
+// console.log(apple(12));
+// console.log(apple(4.4));
 
 // works
 
@@ -228,10 +228,10 @@ function bonusTime(salary, bonus) {
   }
 }
 
-console.log(bonusTime(10000, true));
-console.log(bonusTime(10000, false));
-console.log(bonusTime(10100, true));
-console.log(bonusTime(1023, true));
+// console.log(bonusTime(10000, true));
+// console.log(bonusTime(10000, false));
+// console.log(bonusTime(10100, true));
+// console.log(bonusTime(1023, true));
 
 // works
 
@@ -260,18 +260,17 @@ function isSquare(n) {
   }
 }
 
-console.log(isSquare(-1));
-console.log(isSquare(0));
-console.log(isSquare(3));
-console.log(isSquare(4));
-console.log(isSquare(25));
+// console.log(isSquare(-1));
+// console.log(isSquare(0));
+// console.log(isSquare(3));
+// console.log(isSquare(4));
+// console.log(isSquare(25));
 
 // works
 
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
-
 
 // # For every good kata idea there seem to be quite a few bad ones!
 // # In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'.
@@ -294,12 +293,11 @@ function well(x) {
   }
 }
 
-console.log(well(["bad", "bad", "bad"]));
-console.log(well(["good", "bad", "bad", "bad", "bad"]));
-console.log(
-  well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"])
-);
-
+// console.log(well(["bad", "bad", "bad"]));
+// console.log(well(["good", "bad", "bad", "bad", "bad"]));
+// console.log(
+//   well(["good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"])
+// );
 
 // works
 
@@ -311,16 +309,50 @@ console.log(
 // # For example:
 // # [1, 2, 3] - -> [2, 4, 6]
 
-
-function maps(x){
-  let dbl = []
-    for (let i=0; i<x.length;i++){
-      dbl.push((x[i]*2))
-      
-
-    }
-    return dbl
+function maps(x) {
+  let dbl = [];
+  for (let i = 0; i < x.length; i++) {
+    dbl.push(x[i] * 2);
+  }
+  return dbl;
 }
 
+// console.log(maps([1, 2, 3]));
+// works
 
-console.log(maps([1, 2, 3]));
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+// Write a function named sumDigits which takes a number as
+// input and returns the sum of the absolute value of each
+// of the number's decimal digits. For example:
+
+//   sumDigits(10);  // Returns 1
+//   sumDigits(99);  // Returns 18
+//   sumDigits(-32); // Returns 5
+
+console.log("SUMmmm");
+
+function sumDigits(number) {
+ 
+  let n = number.toString();
+  console.log(n);
+   if (n < 0) {
+     n * -1;
+   } else {
+     n * 1;
+   }
+  p = n.split("").map(Number);
+  console.log(p);
+  const add = (a, b) => a + b;
+
+  const sum = p.reduce(add);
+  console.log(sum);
+  return sum;
+}
+
+sumDigits(-32);
+
+
+/// works on positive, just to make it work for negative now....
