@@ -335,14 +335,13 @@ function maps(x) {
 console.log("SUMmmm");
 
 function sumDigits(number) {
- 
   let n = number.toString();
   console.log(n);
-   if (n < 0) {
-     n * -1;
-   } else {
-     n * 1;
-   }
+  if (n < 0) {
+    n * -1;
+  } else {
+    n * 1;
+  }
   p = n.split("").map(Number);
   console.log(p);
   const add = (a, b) => a + b;
@@ -354,5 +353,23 @@ function sumDigits(number) {
 
 sumDigits(-32);
 
-
+console.log("yep");
 /// works on positive, just to make it work for negative now....
+
+// Write a function called repeatString which repeats the given
+// String src exactly count times.
+
+// repeatStr(6, "I") // "IIIIII"
+// repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+
+console.log(repeatStr(6, "I"));
+
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
