@@ -313,23 +313,57 @@ def well(x):
 
 
 # close on this one
-def maps(a):
-    if a == []:
-        print(a)
-    else:
-        for x in a:
-            b = int(a)
-            c = b*2
-            ans = []
-            ans.append(c)
+# def maps(a):
+#     if a == []:
+#         print(a)
+#     else:
+#         for x in a:
+#             b = int(a)
+#             c = b*2
+#             ans = []
+#             ans.append(c)
 
-            print(ans)
+#             print(ans)
 
 
-maps([1, 2, 3])  # = [2, 4, 6])
-maps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])  # =  [0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
-maps([])  # = [])
+# maps([1, 2, 3])  # = [2, 4, 6])
+# maps([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])  # =  [0, 2, 4, 6, 8, 10, 12, 14, 16, 18])
+# maps([])  # = [])
 
 #######################################
 #######################################
 #######################################
+
+# // Write a function named sumDigits which takes a number as
+# // input and returns the sum of the absolute value of each
+# // of the number's decimal digits. For example:
+
+# // sumDigits(10) # // Returns 1
+# // sumDigits(99) # // Returns 18
+# // sumDigits(-32) # // Returns 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# // Write a function called repeatString which repeats the given
+# // String src exactly count times.
+
+# // repeatStr(6, "I") // "IIIIII"
+# // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+def repeat_string(n,s):
+   
+    return s*n
+
+print(repeat_string(6,"I"))
