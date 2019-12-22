@@ -367,3 +367,23 @@ def repeat_string(n,s):
     return s*n
 
 print(repeat_string(6,"I"))
+
+
+# basic operations - calc in py
+
+def basic_op(a,b,c):
+    if a == '+':
+        return b+c
+    elif a == '-':
+        return b-c
+    elif a =='*':
+        return b*c
+    else:
+        return b/c
+
+print(basic_op('+', 3,7))
+print("ten")
+print(basic_op('/', 49, 7))
+print("seven")
+print(basic_op('*', 5, 7))
+print("thirty five")
