@@ -441,7 +441,8 @@ console.log(mouthSize("toucan"));
 // isDivisible(12,7,5)--> false because 12 is neither divisible by 7 nor 5
 
 function isDivisible(a, b, c) {
-  if (a / b === int && a / c === int) {
+ if  // (a / b === int && a / c === int) 
+  {
     return true;
   } else {
     return false;
