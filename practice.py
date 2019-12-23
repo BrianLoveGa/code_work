@@ -387,3 +387,23 @@ print(basic_op('/', 49, 7))
 print("seven")
 print(basic_op('*', 5, 7))
 print("thirty five")
+
+
+# working
+
+def mouth_size(a):
+    if a.lower() == "alligator":
+        return "small"
+    else:
+        return "wide"
+
+
+
+print(mouth_size("toucan"))
+print(mouth_size("tou55can"))
+print(mouth_size("Alligator"))
+print(mouth_size("croc"))
+print(mouth_size("LION"))
+
+# works
+
