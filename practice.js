@@ -430,7 +430,11 @@ console.log(mouthSize("toucan"));
 
 /// update check
 
-///
+// works
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 
 // Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
 
@@ -441,8 +445,7 @@ console.log(mouthSize("toucan"));
 // isDivisible(12,7,5)--> false because 12 is neither divisible by 7 nor 5
 
 function isDivisible(a, b, c) {
- if  // (a / b === int && a / c === int) 
-  {
+  if (a % b === 0 && a % c === 0) {
     return true;
   } else {
     return false;
@@ -450,3 +453,24 @@ function isDivisible(a, b, c) {
 }
 
 console.log(isDivisible(3, 1, 3));
+
+console.log(isDivisible(12, 2, 6));
+
+console.log(isDivisible(100, 5, 3));
+
+console.log(isDivisible(12, 7, 5));
+
+// works
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+
+function nextInLine(arr, item) {
+  // Your code here
+  let sk = arr.push(item);
+  let st = sk.unshift();
+  return st[0]; // Change this line
+}
+
+// Test Setup
+var testArr = [1, 2, 3, 4, 5];

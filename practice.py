@@ -290,10 +290,10 @@ def well(x):
         if i == 'good':
             g += 1
         else:
-            b +=1
+            b += 1
     if g == 0:
         print('Fail!')
-    elif g>0 and g <= 2:
+    elif g > 0 and g <= 2:
         print('Publish!')
     else:
         print("I smell a series!")
@@ -343,45 +343,34 @@ def well(x):
 # // sumDigits(-32) # // Returns 5
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # // Write a function called repeatString which repeats the given
 # // String src exactly count times.
 
 # // repeatStr(6, "I") // "IIIIII"
 # // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
 
-def repeat_string(n,s):
-   
+def repeat_string(n, s):
+
     return s*n
 
-print(repeat_string(6,"I"))
+
+print(repeat_string(6, "I"))
 
 
 # basic operations - calc in py
 
-def basic_op(a,b,c):
+def basic_op(a, b, c):
     if a == '+':
         return b+c
     elif a == '-':
         return b-c
-    elif a =='*':
+    elif a == '*':
         return b*c
     else:
         return b/c
 
-print(basic_op('+', 3,7))
+
+print(basic_op('+', 3, 7))
 print("ten")
 print(basic_op('/', 49, 7))
 print("seven")
@@ -390,13 +379,14 @@ print("thirty five")
 
 
 # working
-
+#######################################
+#######################################
+#######################################
 def mouth_size(a):
     if a.lower() == "alligator":
         return "small"
     else:
         return "wide"
-
 
 
 print(mouth_size("toucan"))
@@ -406,4 +396,32 @@ print(mouth_size("croc"))
 print(mouth_size("LION"))
 
 # works
+#######################################
+#######################################
+#######################################
 
+# // Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+
+# // Example:
+# // isDivisible(3, 1, 3)--> true because 3 is divisible by 1 and 3
+# // isDivisible(12, 2, 6)--> true because 12 is divisible by 2 and 6
+# // isDivisible(100, 5, 3)--> false because 100 is not divisible by 3
+# // isDivisible(12, 7, 5)--> false because 12 is neither divisible by 7 nor 5
+
+
+def is_divisible(a, b, c):
+    if (a % b == 0) and (a % c == 0):
+        return True
+    else:
+        return False
+
+
+print(is_divisible(3, 1, 3))
+print(is_divisible(12,2,6))
+print(is_divisible(100,5,3))
+print(is_divisible(12,7,5))
+
+# works
+#######################################
+#######################################
+#######################################
