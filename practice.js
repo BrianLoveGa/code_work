@@ -546,13 +546,11 @@ console.log("below here buddy");
 
 function nextInLine(arr, item) {
   // Your code here
-  let sk = arr.push(item);
-  console.log(sk)
-  let st = arr.shift();
-  // . shift removes first, but returns length of array
-  // cannot .shift sk - it's not an array
-  console.log(st)
-  //return st;
+  arr.push(item);
+  let a = arr[0];
+  arr = arr.shift();
+
+  return a;
 }
 
 // Test Setup
@@ -565,3 +563,64 @@ console.log(nextInLine([5, 6, 7, 8, 9], 1)); // should return 5
 //   After nextInLine(testArr, 10), testArr[4] //   should be 10
 console.log(nextInLine(testArr, 10));
 console.log(testArr);
+
+// works
+
+// // Basic JavaScript: Golf Code
+// // In the game of golf each hole has a par meaning the average number of strokes a golfer is
+// // expected to make in order to sink the ball in a hole to complete the play.
+// // Depending on how far above or below par your strokes are, there is a different nickname.
+
+var names = [
+  "Hole-in-one!",
+  "Eagle",
+  "Birdie",
+  "Par",
+  "Bogey",
+  "Double Bogey",
+  "Go Home!"
+];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+  let x = 0;
+  if (strokes === 1) {
+    x += 0;
+  } else if (strokes > 1) {
+    let k = strokes - par;
+    //console.log(k);
+    if (k <= -2) {
+      x += 1;
+    } else if (k === -1) {
+      x += 2;
+    } else if (k === 0) {
+      x += 3;
+    } else if (k === 1) {
+      x += 4;
+    } else if (k === 2) {
+      x += 5;
+    } else if (k >= 3) {
+      x += 6;
+    }
+  }
+
+  console.log(names[x]);
+  return names[x];
+
+  // Only change code above this line
+}
+
+console.log("GOLF STUFF HERE");
+// Change these values to test
+golfScore(5, 4); // //  should return "Birdie"
+golfScore(4, 1); // //  should return "Hole-in-one!"
+golfScore(4, 2); // //  should return "Eagle"
+golfScore(5, 2); // //  should return "Eagle"
+golfScore(4, 3); // //  should return "Birdie"
+golfScore(4, 4); // //  should return "Par"
+golfScore(1, 1); // //  should return "Hole-in-one!"
+golfScore(5, 5); // //  should return "Par"
+golfScore(4, 5); // //  should return "Bogey"
+golfScore(4, 6); // //  should return "Double Bogey"
+golfScore(4, 7); // //  should return "Go Home!"
+golfScore(5, 9); // //  should return "Go Home!"
