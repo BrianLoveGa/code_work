@@ -549,6 +549,8 @@ function nextInLine(arr, item) {
   let sk = arr.push(item);
   console.log(sk)
   let st = arr.shift();
+  // . shift removes first, but returns length of array
+  // cannot .shift sk - it's not an array
   console.log(st)
   //return st;
 }
