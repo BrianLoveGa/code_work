@@ -538,7 +538,28 @@ function whoseMove(lastPlayer, win) {
   }
 }
 
+console.log("below here buddy");
 // works
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
+
+function nextInLine(arr, item) {
+  // Your code here
+  let sk = arr.push(item);
+  console.log(sk)
+  let st = arr.shift();
+  console.log(st)
+  //return st;
+}
+
+// Test Setup
+var testArr = [1, 2, 3, 4, 5];
+
+console.log(nextInLine([], 5)); //// should return a number.
+console.log(nextInLine([], 1)); // should return 1
+console.log(nextInLine([2], 1)); //  should return 2
+console.log(nextInLine([5, 6, 7, 8, 9], 1)); // should return 5
+//   After nextInLine(testArr, 10), testArr[4] //   should be 10
+console.log(nextInLine(testArr, 10));
+console.log(testArr);
