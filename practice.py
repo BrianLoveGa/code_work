@@ -417,9 +417,9 @@ def is_divisible(a, b, c):
 
 
 print(is_divisible(3, 1, 3))
-print(is_divisible(12,2,6))
-print(is_divisible(100,5,3))
-print(is_divisible(12,7,5))
+print(is_divisible(12, 2, 6))
+print(is_divisible(100, 5, 3))
+print(is_divisible(12, 7, 5))
 
 # works
 #######################################
@@ -442,6 +442,7 @@ print(is_divisible(12,7,5))
 #                    "Fails when input is False, False")
 # Test.assert_equals(set_alarm(True, False), True,
 #                    "Fails when input is True, False")
+
 
 def set_alarm(employed, vacation):
     # Your code here
@@ -491,14 +492,79 @@ def unusual_five():
 # // For lastPlayer = "white" and win = true, the output should be "white".
 
 def whoseMove(lastPlayer, win):
-   if win == True:
-    return lastPlayer
-   else:
-    if lastPlayer == 'white':
-        return 'black'
+    if win == True:
+        return lastPlayer
     else:
-        return 'white'
+        if lastPlayer == 'white':
+            return 'black'
+        else:
+            return 'white'
+
+
 # works
 #######################################
 #######################################
 #######################################
+test_Arr = [1, 2, 3, 4, 5]
+
+
+def next_in_line(arr, item):
+    arr.append(item)
+    a = arr[0]
+    arr = arr.pop(0)
+    print("ans")
+    print(arr)
+    print(a)
+    return a
+
+
+next_in_line([], 5)
+next_in_line([], 1)
+next_in_line([2], 1)
+next_in_line(test_Arr, 10)
+# works
+#######################################
+#######################################
+
+names = ["Hole-in-one!", "Eagle", "Birdie",
+         "Par", "Bogey", "Double Bogey", "Go Home!"]
+
+
+def golf_score(par, strokes):
+    x = 0
+    if strokes == 1:
+        x += 0
+    elif strokes > 1:
+        k = strokes - par
+        if k <= -2:
+            x += 1
+        elif k == -1:
+            x += 2
+        elif k == 0:
+            x += 3
+        elif k == 1:
+            x += 4
+        elif k == 2:
+            x += 5
+        else:
+            x += 6
+    return names[x]
+
+
+print(golf_score(5, 4))
+print(golf_score(4, 1))
+print(golf_score(4, 2))
+print(golf_score(5, 2))
+print(golf_score(4, 3))
+print(golf_score(4, 4))
+print(golf_score(1, 1))
+print(golf_score(5, 5))
+print(golf_score(4, 5))
+print(golf_score(4, 6))
+print(golf_score(4, 7))
+print(golf_score(5, 9))
+
+# works
+#######################################
+#######################################
+
