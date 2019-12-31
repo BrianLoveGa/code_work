@@ -332,403 +332,427 @@ function maps(x) {
 //   sumDigits(99);  // Returns 18
 //   sumDigits(-32); // Returns 5
 
-console.log("SUMmmm");
-
-function sumDigits(number) {
-  let n = number.toString();
-  console.log(n);
-  if (n < 0) {
-    n * -1;
-  } else {
-    n * 1;
-  }
-  p = n.split("").map(Number);
-  console.log(p);
-  const add = (a, b) => a + b;
-
-  const sum = p.reduce(add);
-  console.log(sum);
-  return sum;
-}
-
-sumDigits(-32);
-
-console.log("yep");
-/// works on positive, just to make it work for negative now....
-
-// Write a function called repeatString which repeats the given
-// String src exactly count times.
-
-// repeatStr(6, "I") // "IIIIII"
-// repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
-
-function repeatStr(n, s) {
-  return s.repeat(n);
-}
-
-console.log(repeatStr(6, "I"));
-
-// works
-
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-
-// Your task is to create a function that does four basic mathematical operations.
-
-// The function should take three arguments - operation(string/char), value1(number), value2(number).
-// The function should return result of numbers after applying the chosen operation.
-
-// Examples
-// basicOp('+', 4, 7)         // Output: 11
-// basicOp('-', 15, 18)       // Output: -3
-// basicOp('*', 5, 5)         // Output: 25
-// basicOp('/', 49, 7)        // Output: 7
-
-function basicOp(operation, value1, value2) {
-  if (operation === "+") {
-    return value1 + value2;
-  } else if (operation === "-") {
-    return value1 - value2;
-  } else if (operation === "*") {
-    return value1 * value2;
-  } else if (operation === "/") {
-    return value1 / value2;
-  }
-}
-
-console.log("CHECK CHECK CHECK");
-console.log(basicOp("/", 49, 7));
-
-// works
-
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-
-// The wide mouth frog is particularly interested in the eating habits of other creatures.
-
-// He just can't stop asking the creatures he encounters what they like to eat.
-// But then he meet the alligator who just LOVES to eat wide-mouthed frogs!
-
-// When he meets the alligator, it then makes a tiny mouth.
-
-// Your goal in this kata is to create complete the mouth_size method this method take one argument
-// animal which corresponds to the animal encountered by frog. If this one is an alligator (case insensitive)
-// return small otherwise return wide.
-
-function mouthSize(animal) {
-  // code here
-  if (animal.toLowerCase() === "alligator") {
-    return "small";
-  } else {
-    return "wide";
-  }
-}
-
-console.log(mouthSize("toucan"));
-
-/// update check
-
-// works
-
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-
-// Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
-
-// Example:
-// isDivisible(3,1,3)--> true because 3 is divisible by 1 and 3
-// isDivisible(12,2,6)--> true because 12 is divisible by 2 and 6
-// isDivisible(100,5,3)--> false because 100 is not divisible by 3
-// isDivisible(12,7,5)--> false because 12 is neither divisible by 7 nor 5
-
-function isDivisible(a, b, c) {
-  if (a % b === 0 && a % c === 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-console.log(isDivisible(3, 1, 3));
-
-console.log(isDivisible(12, 2, 6));
-
-console.log(isDivisible(100, 5, 3));
-
-console.log(isDivisible(12, 7, 5));
-
-// works
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-
-function nextInLine(arr, item) {
-  // Your code here
-  let sk = arr.push(item);
-  let st = sk.unshift();
-  return st[0]; // Change this line
-}
-
-// Test Setup
-var testArr = [1, 2, 3, 4, 5];
-
-////////////////
-
-function setAlarm(employed, vacation) {
-  if (employed == "true" && vacation == "false") {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-// works
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-
-// # Write a function that always returns 5
-
-// # Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
-
-// # Good luck  : )
-function unusualFive() {
-  let arr = ["h", "e", "l", "l", "o"];
-  return arr.length;
-}
-
-console.log(unusualFive());
-// works
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-// Task
-// Two players - "black" and "white" are playing a game. The game consists of several rounds. If a player wins in a round, he is to move again during the next round. If a player loses a round, it's the other player who moves on the next round. Given whose turn it was on the previous round and whether he won, determine whose turn it is on the next round.
-
-// Input/Output
-// [input] string lastPlayer/$last_player
-
-// "black" or "white" - whose move it was during the previous round.
-
-// [input] boolean win/$win
-
-// true if the player who made a move during the previous round won, false otherwise.
-
-// [output] a string
-
-// Return "white" if white is to move on the next round, and "black" otherwise.
-
-// Example
-// For lastPlayer = "black" and win = false, the output should be "white".
-
-// For lastPlayer = "white" and win = true, the output should be "white".
-
-function whoseMove(lastPlayer, win) {
-  if (win === true) {
-    return lastPlayer;
-  } else {
-    if (lastPlayer === "white") {
-      return "black";
-    } else {
-      return "white";
-    }
-  }
-}
-
-console.log("below here buddy");
-// works
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////
-
-function nextInLine(arr, item) {
-  // Your code here
-  arr.push(item);
-  let a = arr[0];
-  arr = arr.shift();
-
-  return a;
-}
-
-// Test Setup
-var testArr = [1, 2, 3, 4, 5];
-
-console.log(nextInLine([], 5)); //// should return a number.
-console.log(nextInLine([], 1)); // should return 1
-console.log(nextInLine([2], 1)); //  should return 2
-console.log(nextInLine([5, 6, 7, 8, 9], 1)); // should return 5
-//   After nextInLine(testArr, 10), testArr[4] //   should be 10
-console.log(nextInLine(testArr, 10));
-console.log(testArr);
-
-// works
-
-// // Basic JavaScript: Golf Code
-// // In the game of golf each hole has a par meaning the average number of strokes a golfer is
-// // expected to make in order to sink the ball in a hole to complete the play.
-// // Depending on how far above or below par your strokes are, there is a different nickname.
-
-var names = [
-  "Hole-in-one!",
-  "Eagle",
-  "Birdie",
-  "Par",
-  "Bogey",
-  "Double Bogey",
-  "Go Home!"
-];
-
-function golfScore(par, strokes) {
-  // Only change code below this line
-  let x = 0;
-  if (strokes === 1) {
-    x += 0;
-  } else if (strokes > 1) {
-    let k = strokes - par;
-    //console.log(k);
-    if (k <= -2) {
-      x += 1;
-    } else if (k === -1) {
-      x += 2;
-    } else if (k === 0) {
-      x += 3;
-    } else if (k === 1) {
-      x += 4;
-    } else if (k === 2) {
-      x += 5;
-    } else if (k >= 3) {
-      x += 6;
-    }
-  }
-
-  console.log(names[x]);
-  return names[x];
-
-  // Only change code above this line
-}
-
-console.log("GOLF STUFF HERE");
-// Change these values to test
-golfScore(5, 4); // //  should return "Birdie"
-golfScore(4, 1); // //  should return "Hole-in-one!"
-golfScore(4, 2); // //  should return "Eagle"
-golfScore(5, 2); // //  should return "Eagle"
-golfScore(4, 3); // //  should return "Birdie"
-golfScore(4, 4); // //  should return "Par"
-golfScore(1, 1); // //  should return "Hole-in-one!"
-golfScore(5, 5); // //  should return "Par"
-golfScore(4, 5); // //  should return "Bogey"
-golfScore(4, 6); // //  should return "Double Bogey"
-golfScore(4, 7); // //  should return "Go Home!"
-golfScore(5, 9); // //  should return "Go Home!"
-
-function chainToSwitch(val) {
-  var answer = "";
-  // Only change code below this line
-  switch (val) {
-    case "bob":
-      answer = "Marley";
-      break;
-    case 42:
-      answer = "The Answer";
-      break;
-    case 1:
-      answer = "There is no #1";
-      break;
-    case 99:
-      answer = "Missed me by this much!";
-      break;
-    case 7:
-      answer = "Ate Nine";
-      break;
-    default:
-      answer = "";
-      break;
-  }
-
-  // Only change code above this line
-  return answer;
-}
-
-// Change this value to test
-console.log(chainToSwitch(7));
-
-// Modify the function abTest so that if a or b are less than 0
-// the function will immediately exit with a value of undefined.
-// Setup
-
-// function abTest(a, b) {
-//      // Only change code below this line
-
-//     // Only change code above this line
-
-//         return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+// console.log("SUMmmm");
+
+// function sumDigits(number) {
+//   let n = number.toString();
+//   console.log(n);
+//   if (n < 0) {
+//     n * -1;
+//   } else {
+//     n * 1;
+//   }
+//   p = n.split("").map(Number);
+//   console.log(p);
+//   const add = (a, b) => a + b;
+
+//   const sum = p.reduce(add);
+//   console.log(sum);
+//   return sum;
 // }
 
+// sumDigits(-32);
+
+// console.log("yep");
+// /// works on positive, just to make it work for negative now....
+
+// // Write a function called repeatString which repeats the given
+// // String src exactly count times.
+
+// // repeatStr(6, "I") // "IIIIII"
+// // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+// function repeatStr(n, s) {
+//   return s.repeat(n);
+// }
+
+// console.log(repeatStr(6, "I"));
+
+// // works
+
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+// // Your task is to create a function that does four basic mathematical operations.
+
+// // The function should take three arguments - operation(string/char), value1(number), value2(number).
+// // The function should return result of numbers after applying the chosen operation.
+
+// // Examples
+// // basicOp('+', 4, 7)         // Output: 11
+// // basicOp('-', 15, 18)       // Output: -3
+// // basicOp('*', 5, 5)         // Output: 25
+// // basicOp('/', 49, 7)        // Output: 7
+
+// function basicOp(operation, value1, value2) {
+//   if (operation === "+") {
+//     return value1 + value2;
+//   } else if (operation === "-") {
+//     return value1 - value2;
+//   } else if (operation === "*") {
+//     return value1 * value2;
+//   } else if (operation === "/") {
+//     return value1 / value2;
+//   }
+// }
+
+// console.log("CHECK CHECK CHECK");
+// console.log(basicOp("/", 49, 7));
+
+// // works
+
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+// // The wide mouth frog is particularly interested in the eating habits of other creatures.
+
+// // He just can't stop asking the creatures he encounters what they like to eat.
+// // But then he meet the alligator who just LOVES to eat wide-mouthed frogs!
+
+// // When he meets the alligator, it then makes a tiny mouth.
+
+// // Your goal in this kata is to create complete the mouth_size method this method take one argument
+// // animal which corresponds to the animal encountered by frog. If this one is an alligator (case insensitive)
+// // return small otherwise return wide.
+
+// function mouthSize(animal) {
+//   // code here
+//   if (animal.toLowerCase() === "alligator") {
+//     return "small";
+//   } else {
+//     return "wide";
+//   }
+// }
+
+// console.log(mouthSize("toucan"));
+
+// /// update check
+
+// // works
+
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+// // Create a function isDivisible(n, x, y) that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+
+// // Example:
+// // isDivisible(3,1,3)--> true because 3 is divisible by 1 and 3
+// // isDivisible(12,2,6)--> true because 12 is divisible by 2 and 6
+// // isDivisible(100,5,3)--> false because 100 is not divisible by 3
+// // isDivisible(12,7,5)--> false because 12 is neither divisible by 7 nor 5
+
+// function isDivisible(a, b, c) {
+//   if (a % b === 0 && a % c === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(isDivisible(3, 1, 3));
+
+// console.log(isDivisible(12, 2, 6));
+
+// console.log(isDivisible(100, 5, 3));
+
+// console.log(isDivisible(12, 7, 5));
+
+// // works
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+// function nextInLine(arr, item) {
+//   // Your code here
+//   let sk = arr.push(item);
+//   let st = sk.unshift();
+//   return st[0]; // Change this line
+// }
+
+// // Test Setup
+// var testArr = [1, 2, 3, 4, 5];
+
+// ////////////////
+
+// function setAlarm(employed, vacation) {
+//   if (employed == "true" && vacation == "false") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// // works
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+// // # Write a function that always returns 5
+
+// // # Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+// // # Good luck  : )
+// function unusualFive() {
+//   let arr = ["h", "e", "l", "l", "o"];
+//   return arr.length;
+// }
+
+// console.log(unusualFive());
+// // works
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// // Task
+// // Two players - "black" and "white" are playing a game. The game consists of several rounds. If a player wins in a round, he is to move again during the next round. If a player loses a round, it's the other player who moves on the next round. Given whose turn it was on the previous round and whether he won, determine whose turn it is on the next round.
+
+// // Input/Output
+// // [input] string lastPlayer/$last_player
+
+// // "black" or "white" - whose move it was during the previous round.
+
+// // [input] boolean win/$win
+
+// // true if the player who made a move during the previous round won, false otherwise.
+
+// // [output] a string
+
+// // Return "white" if white is to move on the next round, and "black" otherwise.
+
+// // Example
+// // For lastPlayer = "black" and win = false, the output should be "white".
+
+// // For lastPlayer = "white" and win = true, the output should be "white".
+
+// function whoseMove(lastPlayer, win) {
+//   if (win === true) {
+//     return lastPlayer;
+//   } else {
+//     if (lastPlayer === "white") {
+//       return "black";
+//     } else {
+//       return "white";
+//     }
+//   }
+// }
+
+// console.log("below here buddy");
+// // works
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////
+
+// function nextInLine(arr, item) {
+//   // Your code here
+//   arr.push(item);
+//   let a = arr[0];
+//   arr = arr.shift();
+
+//   return a;
+// }
+
+// // Test Setup
+// var testArr = [1, 2, 3, 4, 5];
+
+// console.log(nextInLine([], 5)); //// should return a number.
+// console.log(nextInLine([], 1)); // should return 1
+// console.log(nextInLine([2], 1)); //  should return 2
+// console.log(nextInLine([5, 6, 7, 8, 9], 1)); // should return 5
+// //   After nextInLine(testArr, 10), testArr[4] //   should be 10
+// console.log(nextInLine(testArr, 10));
+// console.log(testArr);
+
+// // works
+
+// // // Basic JavaScript: Golf Code
+// // // In the game of golf each hole has a par meaning the average number of strokes a golfer is
+// // // expected to make in order to sink the ball in a hole to complete the play.
+// // // Depending on how far above or below par your strokes are, there is a different nickname.
+
+// var names = [
+//   "Hole-in-one!",
+//   "Eagle",
+//   "Birdie",
+//   "Par",
+//   "Bogey",
+//   "Double Bogey",
+//   "Go Home!"
+// ];
+
+// function golfScore(par, strokes) {
+//   // Only change code below this line
+//   let x = 0;
+//   if (strokes === 1) {
+//     x += 0;
+//   } else if (strokes > 1) {
+//     let k = strokes - par;
+//     //console.log(k);
+//     if (k <= -2) {
+//       x += 1;
+//     } else if (k === -1) {
+//       x += 2;
+//     } else if (k === 0) {
+//       x += 3;
+//     } else if (k === 1) {
+//       x += 4;
+//     } else if (k === 2) {
+//       x += 5;
+//     } else if (k >= 3) {
+//       x += 6;
+//     }
+//   }
+
+//   console.log(names[x]);
+//   return names[x];
+
+//   // Only change code above this line
+// }
+
+// console.log("GOLF STUFF HERE");
+// // Change these values to test
+// golfScore(5, 4); // //  should return "Birdie"
+// golfScore(4, 1); // //  should return "Hole-in-one!"
+// golfScore(4, 2); // //  should return "Eagle"
+// golfScore(5, 2); // //  should return "Eagle"
+// golfScore(4, 3); // //  should return "Birdie"
+// golfScore(4, 4); // //  should return "Par"
+// golfScore(1, 1); // //  should return "Hole-in-one!"
+// golfScore(5, 5); // //  should return "Par"
+// golfScore(4, 5); // //  should return "Bogey"
+// golfScore(4, 6); // //  should return "Double Bogey"
+// golfScore(4, 7); // //  should return "Go Home!"
+// golfScore(5, 9); // //  should return "Go Home!"
+
+// function chainToSwitch(val) {
+//   var answer = "";
+//   // Only change code below this line
+//   switch (val) {
+//     case "bob":
+//       answer = "Marley";
+//       break;
+//     case 42:
+//       answer = "The Answer";
+//       break;
+//     case 1:
+//       answer = "There is no #1";
+//       break;
+//     case 99:
+//       answer = "Missed me by this much!";
+//       break;
+//     case 7:
+//       answer = "Ate Nine";
+//       break;
+//     default:
+//       answer = "";
+//       break;
+//   }
+
+//   // Only change code above this line
+//   return answer;
+// }
+
+// // Change this value to test
+// console.log(chainToSwitch(7));
+
+// // Modify the function abTest so that if a or b are less than 0
+// // the function will immediately exit with a value of undefined.
+// // Setup
+
+// // function abTest(a, b) {
+// //      // Only change code below this line
+
+// //     // Only change code above this line
+
+// //         return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+// // }
+
+// // Setup
+// var jim = "";
+// function abTest(a, b) {
+//   // Only change code below this line
+//   if (a < 0 || b < 0) {
+//     return undefined;
+//   } else {
+//     // Only change code above this line
+
+//     return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+//   }
+// }
+// // Change values below to test your code
+// console.log(abTest(2, 2));
+// console.log(abTest(-2, 2));
+// console.log(abTest(2, 8));
+// console.log(abTest(2, -7));
+// console.log("CARDS")
+
+// var count = 0;
+
+// function cc(card) {
+//   // Only change code below this line
+//   var b = card.split(',').map(function(item){
+//     return parseInt(item, 10);
+//   })
+
+//   // loop thru cards
+//   for (let i = 0; i < b.length; i++) {
+//     console.log(b[i]);
+//     if (b[i] <= 6) {
+//       count += 1;
+//       console.log(count);
+//     } else if (b[i] === 7 || b[i] === 8 || b[i] === 9) {
+//       count = +0;
+//     } else {
+//       count -= 1;
+//     }
+//   }
+//   // if less than or equal to 6
+//   // add 1 to count for each
+
+//   // if 7 8 or 9 add 0 to count
+
+//   // if 10,j,q,k,or a subtract 1 from count for each
+
+//   // case 1 or more in count - return bet
+//   // case 2 0 or less in count - return hold
+//   if (count > 1) {
+//     return count + " Bet";
+//   } else {
+//     return count + " Hold";
+//     // Only change code above this line
+//   }
+// }
+
+// console.log(cc(2, 3, 4, 5, 6));
+
+// console.log(cc(7, 8, 9));
+
+// console.log(cc(10, "J", "Q", "K", "A"));
+
+// console.log(cc(3, 7, "Q", 8, "A"));
+
+//////////// works
+
+
+// // Setup
+// var myArray = [];
+
+// // Only change code below this line.
+// var i = 0;
+// while (i <= 5){
+//     myArray.unshift(i);
+//     i++;
+// }
+
+// console.log(myArray);
+
 // Setup
-var jim = "";
-function abTest(a, b) {
-  // Only change code below this line
-  if (a < 0 || b < 0) {
-    return undefined;
-  } else {
-    // Only change code above this line
+var myArray = [];
 
-    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
-  }
-}
-// Change values below to test your code
-console.log(abTest(2, 2));
-console.log(abTest(-2, 2));
-console.log(abTest(2, 8));
-console.log(abTest(2, -7));
-console.log("CARDS")
-
-var count = 0;
-
-function cc(card) {
-  // Only change code below this line
-  var b = card.split(',').map(function(item){
-    return parseInt(item, 10);
-  })
-
-  // loop thru cards
-  for (let i = 0; i < b.length; i++) {
-    console.log(b[i]);
-    if (b[i] <= 6) {
-      count += 1;
-      console.log(count);
-    } else if (b[i] === 7 || b[i] === 8 || b[i] === 9) {
-      count = +0;
-    } else {
-      count -= 1;
-    }
-  }
-  // if less than or equal to 6
-  // add 1 to count for each
-
-  // if 7 8 or 9 add 0 to count
-
-  // if 10,j,q,k,or a subtract 1 from count for each
-
-  // case 1 or more in count - return bet
-  // case 2 0 or less in count - return hold
-  if (count > 1) {
-    return count + " Bet";
-  } else {
-    return count + " Hold";
-    // Only change code above this line
-  }
+// Only change code below this line.
+for (var i = 0; i <= 5; i++) {
+  myArray.push(i);
 }
 
-console.log(cc(2, 3, 4, 5, 6));
-
-console.log(cc(7, 8, 9));
-
-console.log(cc(10, "J", "Q", "K", "A"));
-
-console.log(cc(3, 7, "Q", 8, "A"));
-
+console.log(myArray)
