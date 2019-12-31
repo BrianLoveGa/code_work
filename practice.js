@@ -625,9 +625,6 @@ golfScore(4, 6); // //  should return "Double Bogey"
 golfScore(4, 7); // //  should return "Go Home!"
 golfScore(5, 9); // //  should return "Go Home!"
 
-
-
-
 function chainToSwitch(val) {
   var answer = "";
   // Only change code below this line
@@ -638,16 +635,13 @@ function chainToSwitch(val) {
     case 42:
       answer = "The Answer";
       break;
-    case 
-      1:
+    case 1:
       answer = "There is no #1";
       break;
-    case 
-      99:
+    case 99:
       answer = "Missed me by this much!";
       break;
-    case 
-      7:
+    case 7:
       answer = "Ate Nine";
       break;
     default:
@@ -661,3 +655,80 @@ function chainToSwitch(val) {
 
 // Change this value to test
 console.log(chainToSwitch(7));
+
+// Modify the function abTest so that if a or b are less than 0
+// the function will immediately exit with a value of undefined.
+// Setup
+
+// function abTest(a, b) {
+//      // Only change code below this line
+
+//     // Only change code above this line
+
+//         return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+// }
+
+// Setup
+var jim = "";
+function abTest(a, b) {
+  // Only change code below this line
+  if (a < 0 || b < 0) {
+    return undefined;
+  } else {
+    // Only change code above this line
+
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+  }
+}
+// Change values below to test your code
+console.log(abTest(2, 2));
+console.log(abTest(-2, 2));
+console.log(abTest(2, 8));
+console.log(abTest(2, -7));
+console.log("CARDS")
+
+var count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  var b = card.split(',').map(function(item){
+    return parseInt(item, 10);
+  })
+
+  // loop thru cards
+  for (let i = 0; i < b.length; i++) {
+    console.log(b[i]);
+    if (b[i] <= 6) {
+      count += 1;
+      console.log(count);
+    } else if (b[i] === 7 || b[i] === 8 || b[i] === 9) {
+      count = +0;
+    } else {
+      count -= 1;
+    }
+  }
+  // if less than or equal to 6
+  // add 1 to count for each
+
+  // if 7 8 or 9 add 0 to count
+
+  // if 10,j,q,k,or a subtract 1 from count for each
+
+  // case 1 or more in count - return bet
+  // case 2 0 or less in count - return hold
+  if (count > 1) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+    // Only change code above this line
+  }
+}
+
+console.log(cc(2, 3, 4, 5, 6));
+
+console.log(cc(7, 8, 9));
+
+console.log(cc(10, "J", "Q", "K", "A"));
+
+console.log(cc(3, 7, "Q", 8, "A"));
+
