@@ -1,5 +1,3 @@
-
-
 import math as math
 
 
@@ -57,12 +55,12 @@ def string_to_array(s):
 
 # completed
 def greet(name, owner):
-    if (name.lower() == owner.lower()):
+    if name.lower() == owner.lower():
         # used return for code wars
         # using print here so can see results
-        print('Hello boss')
+        print("Hello boss")
     else:
-        print('Hello guest')
+        print("Hello guest")
 
 
 # greet("Fred", "Fred")
@@ -103,17 +101,17 @@ def dig_pow(n, p):
     for num in digits:
         number = int(num)
         print(number)
-        numOut = number**pwr
+        numOut = number ** pwr
         pwr_digits.append(numOut)
         pwr += 1
     print(pwr_digits)
     summed = sum(pwr_digits)
     print(summed)
 
-    k = summed/n
+    k = summed / n
     print(k)
 
-    if(summed % n == 0):
+    if summed % n == 0:
         return k
     else:
         return -1
@@ -149,7 +147,7 @@ def iq_test(numbers):
     index_odd = None
     index_even = None
 
-    numbers = numbers.split(' ')
+    numbers = numbers.split(" ")
     count_odd = 0
     count_even = 0
 
@@ -187,10 +185,11 @@ def iq_test(numbers):
 # completed
 def apple(x):
     x = int(x)
-    if x*x > 1000:
+    if x * x > 1000:
         print("It's hotter than the sun!!")
     else:
         print("Help yourself to a honeycomb Yorkie for the glovebox.")
+
 
 # apple('50') # = "It's hotter than the sun!!"
 # apple(4)  # = "Help yourself to a honeycomb Yorkie for the glovebox."
@@ -219,11 +218,11 @@ def apple(x):
 def bonus_time(salary, bonus):
     # your code here
     if bonus == True:
-        sal = salary*10
+        sal = salary * 10
 
-        print('$'+str(sal))
+        print("$" + str(sal))
     else:
-        print('$'+str(salary))
+        print("$" + str(salary))
 
 
 # bonus_time(10000, True)
@@ -287,16 +286,17 @@ def well(x):
     for i in x:
         if b == len(x):
             break
-        if i == 'good':
+        if i == "good":
             g += 1
         else:
             b += 1
     if g == 0:
-        print('Fail!')
+        print("Fail!")
     elif g > 0 and g <= 2:
-        print('Publish!')
+        print("Publish!")
     else:
         print("I smell a series!")
+
 
 # well(['bad', 'bad', 'bad'])  # = Fail!
 # well(['good', 'bad', 'bad', 'bad', 'bad'])  # = Publish!
@@ -349,9 +349,10 @@ def well(x):
 # // repeatStr(6, "I") // "IIIIII"
 # // repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
 
+
 def repeat_string(n, s):
 
-    return s*n
+    return s * n
 
 
 print(repeat_string(6, "I"))
@@ -359,22 +360,23 @@ print(repeat_string(6, "I"))
 
 # basic operations - calc in py
 
+
 def basic_op(a, b, c):
-    if a == '+':
-        return b+c
-    elif a == '-':
-        return b-c
-    elif a == '*':
-        return b*c
+    if a == "+":
+        return b + c
+    elif a == "-":
+        return b - c
+    elif a == "*":
+        return b * c
     else:
-        return b/c
+        return b / c
 
 
-print(basic_op('+', 3, 7))
+print(basic_op("+", 3, 7))
 print("ten")
-print(basic_op('/', 49, 7))
+print(basic_op("/", 49, 7))
 print("seven")
-print(basic_op('*', 5, 7))
+print(basic_op("*", 5, 7))
 print("thirty five")
 
 
@@ -450,6 +452,8 @@ def set_alarm(employed, vacation):
         return True
     else:
         return False
+
+
 # works
 #######################################
 #######################################
@@ -462,8 +466,11 @@ def set_alarm(employed, vacation):
 
 # Good luck  : )
 
+
 def unusual_five():
     return len("fiver")
+
+
 # works
 #######################################
 #######################################
@@ -491,14 +498,15 @@ def unusual_five():
 
 # // For lastPlayer = "white" and win = true, the output should be "white".
 
+
 def whoseMove(lastPlayer, win):
     if win == True:
         return lastPlayer
     else:
-        if lastPlayer == 'white':
-            return 'black'
+        if lastPlayer == "white":
+            return "black"
         else:
-            return 'white'
+            return "white"
 
 
 # works
@@ -526,8 +534,7 @@ next_in_line(test_Arr, 10)
 #######################################
 #######################################
 
-names = ["Hole-in-one!", "Eagle", "Birdie",
-         "Par", "Bogey", "Double Bogey", "Go Home!"]
+names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"]
 
 
 def golf_score(par, strokes):
@@ -574,3 +581,29 @@ def greet(name):
         return "Hello, my love!"
     else:
         return "Hello, {name}!".format(name=name)
+
+
+# works
+#######################################
+#######################################
+
+# Return the number(count) of vowels in the given string.
+
+# We will consider a, e, i, o, and u as vowels for this Kata.
+
+# The input string will only consist of lower case letters and/or spaces.
+
+
+def getCount(inputStr):
+    num_vowels = 0
+    # your code here
+    for char in inputStr:
+        if char in "aeiouAEIOU":
+            num_vowels = num_vowels + 1
+    return num_vowels
+
+
+# works
+#######################################
+#######################################
+

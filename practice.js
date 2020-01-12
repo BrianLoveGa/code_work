@@ -773,3 +773,26 @@ function greet(name) {
     return "Hello, " + name + "!";
   }
 }
+
+//////////// works
+
+// # Return the number(count) of vowels in the given string.
+
+// # We will consider a, e, i, o, and u as vowels for this Kata.
+
+// # The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  let vowelsCount = 0;
+  let vowel_list = "aeiouAEIOU";
+
+  for (var x = 0; x < str.length; x++) {
+    if (vowel_list.indexOf(str[x]) !== -1) {
+      vowelsCount += 1;
+    }
+  }
+
+  return vowelsCount;
+}
+
+//////////// works
