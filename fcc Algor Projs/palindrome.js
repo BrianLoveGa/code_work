@@ -12,7 +12,7 @@
 
 // Remember to use Read-Search-Ask if you get stuck. Write your own code.
 
-// palindrome("eye") should return a boolean.
+// palindrome("eye") should return a boolean true.
 // palindrome("eye") should return true.
 // palindrome("_eye") should return true.
 // palindrome("race car") should return true.
