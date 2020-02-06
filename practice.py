@@ -621,3 +621,42 @@ def divide(weight):
 # works
 #######################################
 #######################################
+
+
+# * No Loops Allowed *
+
+# You will be given an array (a) and a value (x).
+#  All you need to do is check whether the provided array contains the value, without using a loop.
+
+# Array can contain numbers or strings. X can be either.
+#  Return true if the array contains the value, false if not. 
+# With strings you will need to account for case.
+
+    # test.assert_equals(check([66, 101], 66), True)
+    # test.assert_equals(check([80, 117, 115, 104, 45, 85, 112, 115], 45), True)
+    # test.assert_equals(check(['t', 'e', 's', 't'], 'e'), True)
+    # test.assert_equals(check(['what', 'a', 'great', 'kata'], 'kat'), False)
+
+
+def check(a, x): 
+    if x in a:
+        return True
+    else:
+        return False
+
+# Time: 766ms Passed: 111 Failed: 0
+# Test Results:
+#  Fixed Tests
+#  Basic Test Cases (4 of 4 Assertions)
+#  Edge Cases (5 of 5 Assertions)
+# Completed in 0.07ms
+#  Random Tests
+#  For/while Test Cases (2 of 2 Assertions)
+#  Random Test Cases (100 of 100 Assertions)
+# Completed in 16.11ms
+# You have passed all of the tests! :)
+
+
+ ###### better way
+ def check(a, x): 
+    return x in a
